@@ -7,7 +7,7 @@ gunicorn 20.0.4
 postgresql 13
 nginx 1.21.3
 ### Запуск проекта
-- клонировать проект с GitHub
+- Клонировать проект с GitHub
 - Перейти в каталог с docker-compose
 cd .../infra_sp2/infra
 - Собрать контейнер 
