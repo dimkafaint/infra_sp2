@@ -12,9 +12,15 @@ nginx 1.21.3
 cd .../infra_sp2/infra
 - Собрать контейнер 
 docker-compose up
--сделать миграции, создать пользователя и собрать статику
+- сделать миграции, создать пользователя и собрать статику
+```
 docker-compose exec web python manage.py migrate
+```
+```
 docker-compose exec web python manage.py createsuperuser
+```
+```
 docker-compose exec web python manage.py collectstatic --no-input
+```
 
 
