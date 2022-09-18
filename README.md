@@ -9,15 +9,18 @@ nginx 1.21.3
 
 ### Запуск проекта
 - Клонировать проект с GitHub
-```https://github.com/dimkafaint/infra_sp2
+```
+https://github.com/dimkafaint/infra_sp2
 ```
 - Установить Docker
-```https://docs.docker.com/desktop/install/linux-install/
+```
+https://docs.docker.com/desktop/install/linux-install/
 ```
 - Перейти в каталог с docker-compose
-cd .../infra_sp2/infra
+## cd .../infra_sp2/infra
 - Создать файл .env и заполнить его:
-```DB_ENGINE=
+```
+DB_ENGINE=
 DB_NAME=
 POSTGRES_USER=
 POSTGRES_PASSWORD=
@@ -26,11 +29,13 @@ DB_PORT=
 SECRET_KEY=
 ```
 - Собрать контейнер и запустить
-```sudo docker-compose build
+```
+sudo docker-compose build
 sudo docker-compose up -d
 ```
 - *для остановки использовать 
-```sudo docker-compose down -v
+```
+sudo docker-compose down -v
 ```
 - Сделать миграции, создать пользователя и собрать статику
 ```
@@ -43,7 +48,8 @@ sudo docker-compose exec web python manage.py collectstatic --no-input
 Админка http://localhost/admin
 API http://localhost/api
 Наполнение проекта из фикстур:
-```sudo docker-compose exec web python manage.py shell
+```
+sudo docker-compose exec web python manage.py shell
 >>> from django.contrib.contenttypes.models import ContentType
 >>> ContentType.objects.all().delete()
 >>> quit()
